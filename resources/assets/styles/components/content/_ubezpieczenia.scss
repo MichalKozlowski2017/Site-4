@@ -1,0 +1,243 @@
+.ubezpieczenia {
+	&__wrapper {
+		display: -ms-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+
+		@include mq($min-width: 575px) {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+		}
+
+		&__item {
+			width: 100%;
+			padding: 30px;
+			text-align: center;
+			background-size: cover;
+			margin-bottom: 40px;
+			position: relative;
+			overflow: hidden;
+			-webkit-transition: 0.5s;
+			transition: 0.5s;
+			margin: 10px 0;
+
+			&--image {
+				border-bottom-right-radius: 25px;
+			}
+
+			&__title {
+				// margin-top: -80px;
+				-webkit-transition: 0.5s;
+				transition: 0.5s;
+
+				&__icon {
+					width: 60px;
+					height: 60px;
+					margin: 0 auto;
+					margin-bottom: 15px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					position: relative;
+					z-index: 3;
+					opacity: 0;
+				}
+			}
+
+			&__overlay,
+			&__overlay-image {
+				display: none;
+			}
+      
+      &__text {
+        p {
+          color: $color_text_black;
+        }
+
+        a {
+          color: $color_text_black;
+          -webkit-transition: 0.3s;
+          transition: 0.3s;
+
+          &:hover {
+            color: $color_primary;
+          }
+        }
+      }
+
+			img {
+				display: none;
+			}
+
+			h3 {
+				font-size: 20px;
+				text-align: center;
+
+				p {
+					font-size: 20px;
+					text-align: center;
+					margin: 0;
+				}
+			}
+
+			p {
+				color: $color_text_black;
+				font-size: 14px;
+				text-align: center;
+			}
+
+			a {
+				margin: 0 auto;
+			}
+
+			@include mq($min-width: 768px) {
+				width: 47%;
+				margin-bottom: 20px;
+				-webkit-transition: 0.5s;
+				transition: 0.5s;
+				margin: 10px;
+
+				&__title {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					-webkit-transform: translate(-50%, -50%);
+					transform: translate(-50%, -50%);
+					z-index: 4;
+					margin: 0;
+
+					&__icon {
+						-webkit-transition: 0.5s;
+						transition: 0.5s;
+						opacity: 1;
+
+						&--hovered {
+							opacity: 0;
+						}
+					}
+
+					&--hovered {
+						margin-top: -90px;
+					}
+				}
+
+				h3 {
+					position: relative;
+					margin-bottom: 35px;
+					z-index: 3;
+				}
+
+				p {
+					position: relative;
+					margin-top: 80px;
+					margin-bottom: 35px;
+				}
+
+				&__overlay {
+					position: absolute;
+					display: block;
+					width: 100%;
+					height: 100%;
+					left: 0;
+					top: 0;
+					background-color: #fff;
+					border: 1px solid $color_text_gray;
+					z-index: 1;
+					-webkit-transition: 0.5s;
+					transition: 0.5s;
+
+					&--hovered {
+						top: -100%;
+						opacity: 0;
+					}
+				}
+
+				&__overlay-image {
+					position: absolute;
+					display: none;
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					left: 0;
+					top: 0;
+					background-color: #fff;
+					z-index: 5;
+					-webkit-transition: 0.5s;
+					transition: 0.5s;
+					border-bottom-right-radius: 25px;
+					overflow: hidden;
+
+					@include mq($min-width:768px) {
+						display: block;
+						&--hovered {
+							-webkit-animation: image-hover 0.5s ease-in-out;
+							animation: image-hover .5s ease-in-out;
+							-webkit-animation-fill-mode: forwards;
+							/* Safari 4.0 - 8.0 */
+							animation-fill-mode: forwards;
+						}
+					}
+					
+					h3 {
+						position: absolute;
+						width: 100%;
+						bottom: 0;
+						padding: 10px;
+						text-align: center;
+						color: $color_white;
+						background-color: $color_primary;
+						margin: 0;
+
+						p {
+							color: $color_white;
+							font-weight: bold;
+							font-size: 18px;
+						}
+					}
+
+					
+				}
+			}
+		}
+	}
+}
+
+
+@-webkit-keyframes image-hover {
+	0% {
+		opacity: 1;
+		top: 0;
+	}
+	50% {
+		opacity: 0;
+		top: 0;
+	}
+	100% {
+		opacity: 0;
+		top: -100%;
+	}
+}
+
+
+@keyframes image-hover {
+	0% {
+		opacity: 1;
+		top: 0;
+	}
+	50% {
+		opacity: 0;
+		top: 0;
+	}
+	100% {
+		opacity: 0;
+		top: -100%;
+	}
+}

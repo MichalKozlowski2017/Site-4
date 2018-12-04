@@ -1,0 +1,84 @@
+.promo {
+  &__wrapper {
+    background-color: $color_white;
+    -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px;
+
+    @include mq($min-width: 1200px) {
+      padding: 40px 70px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    &__cta {
+      text-align: center;
+    }
+
+    &__points {
+      ul {
+        list-style: none;
+        margin: 50px 0;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        @include mq($min-width: 1200px) {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
+
+        li {
+          position: relative;
+          margin-bottom: 20px;
+          font-size: 20px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            width: 21px;
+            height: 23px;
+            background-size: 21px 23px;
+            background-image: url(#{$images_dir}tick.svg);
+          }
+        }
+      }
+    }
+
+    &__footer {
+      margin-top: 25px;
+
+      &__text {
+        p {
+          font-size: 14px;
+        }
+      }
+
+      &__links {
+        a {
+          display: block;
+          text-decoration: none;
+          color: $color_primary;
+          text-decoration: underline;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+.ubezpieczenia-slider {
+  padding: 30px 0 !important;
+  padding-bottom: 0 !important;
+
+  @include mq($min-width: 992px) {
+    padding: 30px 70px !important;
+  }
+
+  .arrow-next, .arrow-prev {
+    position: absolute;
+    cursor: pointer;
+    padding: 20px;
+    color: #54565B;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    i {
+      font-size: 35px;
+    }
+
+    @include mq($min-width: 768px) {
+      left: auto;
+    }
+    
+  }
+
+  .arrow-next {
+    right: 10px;
+    @include mq($min-width: 768px) {
+      right: -20px;
+       top: 50%;
+    }
+  }
+
+  .arrow-prev {
+    left: 10px;
+    @include mq($min-width: 768px) {
+      transform: translateX(0);
+      left: -20px;
+      transform: translateY(-50%);
+    }
+  }
+
+  .slick-track {
+    padding: 30px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+
+    @include mq($min-width: 768px) {
+      padding: 78px 0 70px 0;
+    }
+  }
+  .slick-slide {
+    margin: 40px;
+    
+    @include mq($min-width: 768px) {
+      width: 350px;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+    &__slide {
+      -webkit-box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 35px 0 rgba(0, 0, 0, 0.08);
+      // margin: 30px;
+      width: 100%;
+      background-color: #fff;
+      padding: calc(40px * 0.5);
+      text-align: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      max-width: auto;
+
+      @include mq($min-width: 768px) {
+        max-width: 300px;
+        padding: 25px;
+        margin: 30px;
+      }
+
+      &__icon {
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 60px 60px;
+        width: 100%;
+        margin-bottom: calc(20px * 0.5);
+
+        @include mq($min-width: 768px) {
+          width: calc(60px * 0.5);
+          height: calc(60px * 0.5);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: calc(60px * 0.5) calc(60px * 0.5);
+          width: 100%;
+          margin-bottom: calc(20px * 0.5);
+        }
+      }
+
+      h3 {
+        font-size: 23px;
+        font-weight: bold;
+        color: #00abe8;
+
+        @include mq($min-width: 768px) {
+          font-size: calc(23px * 0.5);
+        }
+      }
+
+      p {
+        font-size: 14px;
+        margin-bottom: 20px;
+
+        @include mq($min-width: 768px) {
+        	font-size: calc(14px * 0.5);
+        	margin-bottom: calc(20px * 0.5);
+        }
+      }
+      &__cta {
+        padding: 0;
+        margin: 0;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        a {
+          width: 100%;
+        }
+
+        @include mq($min-width: 768px) {
+          -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+  .slick-center {
+    @include mq($min-width: 768px) {
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      -webkit-transform: scale(2);
+      transform: scale(2);
+      z-index: 4;
+    }
+  }
+}
+
+.slider-beneficts,
+.ubezpieczenia-partners,
+.slider-downloads {
+  display: none;
+  padding-bottom: 0;
+}
+
+.slider-beneficts-1,
+.ubezpieczenia-partners-1,
+.slider-downloads-1 {
+  display: block;
+}

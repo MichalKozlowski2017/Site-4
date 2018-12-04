@@ -1,0 +1,19 @@
+.banner-short {
+  min-height: 504px;
+  background-size: cover;
+  &__title {
+    padding: 300px 20px 20px 20px;
+    h2 {
+      color: $color_white;
+      font-size: 32px;
+    }
+
+    @include mq($min-width: 575px) {
+      padding: 300px 70px 20px 70px;
+    }
+
+    @include mq($min-width: 992px) {
+      padding: 300px 170px 20px 170px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.cta-green {
+  background-repeat: no-repeat;
+  background-color: $color_primary;
+  margin: 25px 0;
+  padding-top: 65px !important;
+  padding-bottom: 65px !important;
+  -webkit-box-shadow: 0px 0 52px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 52px 0 rgba(0, 0, 0, 0.1);
+  background-position: -999px 0;
+
+  @include mq($min-width: 992px) {
+    background-position: right center;
+  }
+
+  &__wrapper {
+    width: 100%;
+
+    @include mq($min-width: 992px) {
+      width: 50%;
+    }
+
+    h2,
+    p {
+      color: $color_white;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+
+    p {
+      margin-bottom: 45px;
+    }
+
+    .btn {
+      padding: 5px 60px 5px 35px;
+      font-weight: 400;
+
+      &::after {
+        right: 35px;
+      }
+    }
+  }
+}

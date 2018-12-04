@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="23px" viewBox="0 0 16 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/location</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="box/contact" transform="translate(-17.000000, -19.000000)" stroke="#FFFFFF" stroke-width="1.0368">
+            <g id="Group">
+                <g id="icons/location" transform="translate(18.000000, 20.000000)">
+                    <path d="M13.824,7.00163192 C13.824,12.6615429 6.912,20.736 6.912,20.736 C6.912,20.736 0,12.4957239 0,7.00163192 C0,3.13470404 3.09491521,0 6.912,0 C10.7294251,0 13.824,3.13470404 13.824,7.00163192 Z" id="Stroke-1"></path>
+                    <path d="M9.6768,6.912 C9.6768,8.43891429 8.43897185,9.6768 6.91212857,9.6768 C5.38528528,9.6768 4.1472,8.43891429 4.1472,6.912 C4.1472,5.38508571 5.38528528,4.1472 6.91212857,4.1472 C8.43897185,4.1472 9.6768,5.38508571 9.6768,6.912 Z" id="Stroke-3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

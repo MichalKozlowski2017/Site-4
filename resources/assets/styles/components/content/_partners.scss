@@ -1,0 +1,44 @@
+.partners {
+	&__wrapper {
+		display: -ms-flex;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+
+		@include mq($min-width: 575px) {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-ms-flex-pack: distribute;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+			&__item {
+				margin-right: 40px;
+				width: 21%;
+			}
+		}
+
+		@include mq($min-width: 1069px) {
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+		}
+
+		&__item {
+			padding: 20px 0;
+			text-align: center;
+
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+}

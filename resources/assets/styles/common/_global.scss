@@ -1,0 +1,22 @@
+body {
+  max-width: $layout_width;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 11px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.26);
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+
+html {
+  background-color: #fff !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color_text_black;
+}

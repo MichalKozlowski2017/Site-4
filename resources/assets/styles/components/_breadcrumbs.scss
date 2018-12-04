@@ -1,0 +1,22 @@
+.breadcrumbs {
+  font-size: 14px;
+  padding: 30px 20px;
+  color: $color_text_gray;
+
+  @include mq($min-width: 575px) {
+    padding: 30px 70px;
+  }
+
+  @include mq($min-width: 992px) {
+    padding: 30px 170px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color_text_gray;
+  }
+  b {
+    color: $color_primary;
+    font-weight: 400;
+  }
+}

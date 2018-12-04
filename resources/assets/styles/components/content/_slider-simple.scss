@@ -1,0 +1,43 @@
+.slider-simple {
+  &__wrapper {
+    &__slide {
+      width: 100%;
+      height: 450px;
+      background-size: cover;
+      background-position: 72% 0;
+      background-repeat: no-repeat;
+    }
+
+    h2 {
+      font-size: 70px;
+      color: $color_white;
+      letter-spacing: 10px;
+      padding-top: 50px;
+    }
+
+    .slick-dots {
+      display: none;
+      bottom: 30px;
+      li {
+      	width: 15px;
+      	height: 15px;
+
+      	button {
+      		&::before {
+      			font-size: 15px;
+      			color: $color_white;
+      			opacity: 1;
+      		}
+      	}
+      }
+
+      li.slick-active {
+      	button {
+      		&::before {
+      			color: $color_primary_dark;
+      		}
+      	}
+      }
+    }
+  }
+}

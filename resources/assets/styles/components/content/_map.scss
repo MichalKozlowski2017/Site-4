@@ -1,0 +1,208 @@
+#wpsl-result-list {
+  display: none !important;
+}
+
+#wpsl-gmap {
+  width: 100% !important;
+  margin-bottom: 30px;
+}
+#wpsl-wrap {
+  margin-bottom: 0 !important;
+}
+
+.wpsl-directions {
+  display: none !important;
+}
+.wpsl-search.wpsl-checkboxes-enabled {
+  padding: 0;
+}
+.map {
+  padding: 0 !important;
+
+  .content-section__title {
+    padding: 30px 20px;
+    padding-top: 30px;
+
+    @include mq($min-width: 575px) {
+      padding: 30px 70px;
+    }
+    @include mq($min-width: 992px) {
+      padding: 30px 170px;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+  }
+  .wpsl-search {
+    background-color: #fff;
+    padding: 30px 20px !important;
+
+    @include mq($min-width: 575px) {
+      padding: 30px 70px !important;
+    }
+
+    @include mq($min-width: 992px) {
+      padding: 30px 170px !important;
+    }
+  }
+  .wpsl-input {
+    float: none;
+    margin-right: 0;
+    @include mq($min-width: 768px) {
+      float: right !important;
+    }
+  }
+  #wpsl-search-wrap {
+    padding: 0;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: 0 auto;
+    form {
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      div {
+        &:nth-child(1) {
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+          order: 2;
+        }
+        &:nth-child(3) {
+          -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+          order: 3;
+        }
+      }
+      ul {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1;
+      }
+      @include mq($min-width: 768px) {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+    }
+    .wpsl-search-btn-wrap {
+      input[type="submit"] {
+        background-color: $color_primary;
+        background-image: none !important;
+        border: 0;
+        padding: 15px 25px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+        }
+      }
+      @include mq($min-width: 768px) {
+        // float: right;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    // Checkboxes
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      margin-top: 20px;
+      position: relative;
+      li {
+        // width: 49%;
+        display: inline-block;
+        margin-bottom: 30px;
+        &:last-child {
+          margin-right: 0 !important;
+        }
+        input {
+          margin-right: 10px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+      @include mq($min-width: 768px) {
+        // width: 67%;
+        // float: left;
+        margin-top: 0;
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        li {
+          padding-top: 22px;
+          width: 25%;
+        }
+      }
+    }
+  }
+  .wpsl-search-input {
+    display: none !important;
+  }
+  .wpsl-input {
+    label {
+      display: none !important;
+    }
+    position: relative;
+    @include mq($min-width: 768px) {
+      width: 30% !important;
+      float: right;
+      margin-top: 10px;
+    }
+    label {
+      display: none;
+    }
+    // Select
+    select {
+      width: 100% !important;
+      border: 1px solid #979797;
+      -webkit-appearance: none;
+      background-color: #fff;
+      padding: 14px 15px !important;
+      &:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+      option {
+        border-radius: 0;
+      }
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg);
+      width: 13px;
+      height: 13px;
+      background-size: 13px 13px;
+      background-image: url("#{$images_dir}trinagle-green.svg");
+      pointer-events: none !important;
+    }
+  }
+  .wpsl-search {
+    margin: 0 auto;
+  }
+  .wpsl-gmap-canvas {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

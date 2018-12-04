@@ -1,0 +1,68 @@
+.main {
+  max-width: 1440px;
+  position: relative;
+}
+
+.contact-widget {
+  position: fixed;
+  bottom: -25px !important;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 10;
+  -webkit-box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.1);
+
+  @include mq($min-width: 575px) {
+    position: absolute;
+    left: 0;
+    top: 300px;
+    width: 50px;
+    height: 150px;
+  }
+  &__wrapper {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    @include mq($min-width: 575px) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    a {
+      width: 33.33333%;
+      height: 50px;
+      background-color: $color_primary;
+      background-position: center center;
+      background-repeat: no-repeat;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: $color_primary_dark;
+      }
+      &:nth-child(1) {
+        background-image: url(#{$images_dir}location.svg);
+      }
+      &:nth-child(2) {
+        background-image: url(#{$images_dir}chmurka.svg);
+      }
+      &:nth-child(3) {
+        background-image: url(#{$images_dir}headphones.svg);
+      }
+
+      @include mq($min-width: 575px) {
+        width: 50px;
+      }
+    }
+  }
+}

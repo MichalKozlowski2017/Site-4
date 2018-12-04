@@ -1,0 +1,89 @@
+.howto {
+  &__wrapper {
+    padding: 0;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .arrow-stroke {
+      display: none;
+    }
+
+    @include mq($min-width: 768px) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+
+      .arrow-stroke {
+        display: block;
+        width: 30px;
+        background-image: url(#{$images_dir}arrow_stroke.svg);
+        height: 100%;
+        background-position: center center;
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    &__point {
+      text-align: center;
+      padding: 25px;
+      position: relative;
+      max-width: 200px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background-size: 30px 20px;
+        background-image: url(#{$images_dir}arrow_stroke.svg);
+        -webkit-transform: rotate(90deg) translateX(-50%);
+        transform: rotate(90deg) translateX(-50%);
+        bottom: -15px;
+        left: calc(50% - 12px);
+      }
+
+      &:nth-child(5) {
+        &::after {
+          display: none;
+        }
+      }
+
+      @include mq($min-width: 768px) {
+        max-width: 256px;
+        &::after {
+          display: none;
+        }
+      }
+
+      &__icon {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__cta {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}

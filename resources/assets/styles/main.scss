@@ -1,0 +1,67 @@
+/** Import everything from autoload */
+@import "./autoload/**/*";
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+
+@import "common/variables";
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&subset=latin-ext");
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+@import "~sass-mediaqueries/media-queries";
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~nouislider/distribute/nouislider.min.css";
+@import "~hamburgers/dist/hamburgers.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/** Import theme styles **/
+
+// Components
+@import "common/global";
+@import "components/buttons";
+@import "components/calc";
+@import "components/calc-wniosek";
+@import "components/mobile-nav";
+@import "components/breadcrumbs";
+@import "components/form-box";
+@import "components/checkbox";
+@import "components/contact-widget";
+@import "components/popup-contact-info";
+@import "components/banner-short";
+
+// Content
+@import "components/content/partners";
+@import "components/content/cta-gray";
+@import "components/content/cta-green";
+@import "components/content/slider";
+@import "components/content/slider-simple";
+@import "components/content/benefits";
+@import "components/content/promo";
+@import "components/content/howto";
+@import "components/content/map";
+@import "components/footer-above";
+@import "components/content/ubezpieczenia";
+@import "components/content/ubezpieczenia-slider";
+@import "components/content/ubezpieczenia-partners";
+@import "components/content/downloads";
+@import "components/content/downloads-dropdown";
+@import "components/content/list";
+@import "components/content/paragraph";
+@import "components/content/--nazwa-firmy--24";
+
+// Layout
+@import "layouts/header";
+@import "layouts/banner";
+@import "layouts/footer";
+@import "layouts/content";
+@import "layouts/popup";
+@import "layouts/logowanie";
+@import "layouts/wniosek";
+@import "layouts/search";

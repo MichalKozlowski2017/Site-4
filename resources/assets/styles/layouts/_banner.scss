@@ -1,0 +1,172 @@
+.banner {
+  height: auto;
+  background-color: $color_white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 20px 0;
+  margin-top: 40px;
+  position: relative;
+
+  @include mq($min-width: 575px) {
+    height: auto;
+    background-size: 100%;
+  }
+
+  @include mq($min-width: 768px) {
+    height: auto;
+  }
+
+  @include mq($min-width: 992px) {
+    background-position: top left;
+    height: 680px;
+    background-size: cover;
+    margin-top: 0;
+  }
+
+  @include mq($min-width: 1069px) {
+    background-position: top left;
+    height: 700px;
+    background-size: cover;
+  }
+
+  @include mq($min-width: 1169px) {
+    height: 700px;
+    background-size: cover;
+    background-position: bottom left;
+  }
+
+  &__page-title {
+    margin-left: 30px;
+    min-height: 45px;
+    position: relative;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    @include mq($min-width: 1069px) {
+      margin-top: 100px;
+      margin-left: 80px;
+    }
+
+    p {
+      color: $color_white;
+      margin-bottom: 0;
+      position: relative;
+      -ms-flex-item-align: center;
+    }
+
+    &::before {
+      content: "";
+      top: 0;
+      left: -10px;
+      height: 100%;
+      width: 2px;
+      background-color: $color_white;
+      position: absolute;
+    }
+  }
+
+  &__copy {
+    position: absolute;
+    padding: 20px;
+    background-color: transparent;
+    height: 340px;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+
+    @include mq($min-width: 575px) {
+      padding: 20px 70px;
+      height: 450px;
+    }
+
+    @include mq($min-width: 768px) {
+      padding: 20px 70px;
+      height: 420px;
+    }
+
+    @include mq($min-width: 992px) {
+      padding: 20px 20px 20px 170px;
+      height: 420px;
+      width: 40%;
+      top: auto;
+      bottom: 150px;
+      left: 0;
+    }
+
+    @include mq($min-width: 1250px) {
+      width: 55%;
+    }
+
+    &__wrapper {
+      background: rgba(0, 0, 0, 0.2);
+      background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 68%);
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 68%);
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 68%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='rgba(0, 0, 0, 0.2)', endColorstr='rgba(0, 0, 0, 0)', GradientType=1);
+    }
+
+    h2 {
+      color: $color_white;
+    }
+
+    p {
+      margin: 0;
+      font-size: 15px;
+      color: $color_white;
+    }
+  }
+
+  &__box {
+    position: relative;
+    margin: 350px 20px 20px 20px;
+    top: 0;
+    max-width: 100%;
+    // min-height: 587px;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.31);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.31);
+    border-radius: 3px;
+    padding: 20px 25px;
+    z-index: 5;
+
+    .form-box_wrapper {
+      margin-bottom: 0 !important;
+    }
+
+    @include mq($min-width: 575px) {
+      min-width: 497px;
+      margin: 450px 70px 20px 70px;
+    }
+
+    @include mq($min-width: 768px) {
+      min-width: 497px;
+      margin: 420px 70px 20px 70px;
+    }
+
+    @include mq($min-width: 992px) {
+      position: absolute;
+      right: 70px;
+      margin: 0;
+      max-width: 497px;
+      top: 80px;
+    }
+    @include mq($min-width: 1069px) {
+      top: 120px;
+    }
+  }
+}

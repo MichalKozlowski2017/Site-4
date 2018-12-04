@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="10px" viewBox="0 0 21 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pkt_kto_kariera" transform="translate(-114.000000, -177.000000)" stroke="#8EBF25">
+            <g id="icons/arrow" transform="translate(114.000000, 177.000000)">
+                <g id="Group-9">
+                    <path d="M0,5 L19.4889526,5" id="Path-3"></path>
+                    <polyline id="Rectangle" transform="translate(14.909903, 4.909903) rotate(-315.000000) translate(-14.909903, -4.909903) " points="11.4380772 1.43807717 18.381728 1.43807717 18.381728 8.38172798"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

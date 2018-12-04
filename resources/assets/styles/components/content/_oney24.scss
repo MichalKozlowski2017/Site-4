@@ -1,0 +1,154 @@
+.popup-24 {
+	h2 {
+		font-size: 23px;
+		color: $color_primary;
+		font-weight: bold;
+		margin-bottom: 25px;
+	}
+
+	h6 {
+		padding-left: 50px;
+		position: relative;
+		font-size: 15px;
+		margin-bottom: 40px;
+
+		em {
+			color: $color_primary;
+		}
+
+		&::before {
+			content: '';
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-size: 40px 40px;
+			background-image: url(#{$images_dir}warning.svg);
+		}
+	}
+
+	hr {
+		margin: 30px 0;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	p {
+		font-size: 18px;
+		margin-bottom: 25px;
+	}
+
+	em {
+		font-style: normal;
+		color: $color_primary;
+	}
+
+	ul {
+		list-style: none;
+		margin-bottom: 40px;
+
+		li {
+			font-size: 18px;
+			position: relative;
+			margin-bottom: 20px;
+
+			&::before {
+				content: '';
+				width: 26px;
+				height: 26px;
+				background-size: 26px 26px;
+				background-image: url(#{$images_dir}--nazwa-firmy--24_pointer.svg);
+				position: absolute;
+				left: -40px;
+				top: 0;
+			}
+		}
+	}
+
+	ol {
+		list-style: none;
+		counter-reset: my-awesome-counter;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 20px;
+
+		li {
+			text-align: center;
+			counter-increment: my-awesome-counter;
+			font-size: 15px;
+
+			p {
+				font-size: 15px;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+
+			}
+
+			&::before {
+				content: counter(my-awesome-counter) "";
+				color: red;
+				font-weight: bold;
+				font-size: 90px;
+				color: white;
+				text-shadow: -1px -1px 0 #A1A1A1,
+					1px -1px 0 #A1A1A1,
+					-1px 1px 0 #A1A1A1,
+					1px 1px 0 #A1A1A1;
+			}
+		}
+
+		@include mq($min-width: 768px) {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: normal;
+			-ms-flex-direction: row;
+			flex-direction: row;
+			-ms-flex-pack: distribute;
+			justify-content: space-around;
+
+			li {
+				max-width: 200px;
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 100px;
+					right: -50px;
+					background-image: url(#{$images_dir}arrow_stroke.svg);
+					width: 30px;
+					height: 20px;
+					background-size: 30px 20px;
+				}
+
+				&:last-child {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+.popup__wrapper__text__button {
+	width: 100%;
+	text-align: center;
+
+	.popup-content-button {
+		text-align: center;
+		margin: 0 auto;
+	}
+}

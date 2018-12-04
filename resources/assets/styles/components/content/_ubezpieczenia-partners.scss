@@ -1,0 +1,44 @@
+.ubezpieczenia-partners {
+  padding: 0 20px !important;
+  @include mq($min-width: 768px) {
+    padding: 0 170px 30px 170px !important;
+  }
+
+  .content-section__title {
+    h2 {
+      font-size: 16px;
+      font-weight: 300;
+      text-align: center;
+      color: $color_text_gray;
+    }
+  }
+
+  &__wrapper {
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+
+    @include mq($min-width: 575px) {
+      max-width: 500px;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+    &__partner {
+      margin: 10px 0;
+    }
+  }
+}
